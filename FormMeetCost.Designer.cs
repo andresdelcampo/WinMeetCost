@@ -46,7 +46,7 @@
             this.labelCost.Name = "labelCost";
             this.labelCost.OutlineForeColor = System.Drawing.Color.Black;
             this.labelCost.OutlineWidth = 2F;
-            this.labelCost.Size = new System.Drawing.Size(382, 85);
+            this.labelCost.Size = new System.Drawing.Size(250, 85);
             this.labelCost.TabIndex = 0;
             this.labelCost.Text = "0 kr";
             this.labelCost.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -58,9 +58,10 @@
             // 
             // labelAttendees
             // 
+            this.labelAttendees.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAttendees.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelAttendees.ForeColor = System.Drawing.Color.White;
-            this.labelAttendees.Location = new System.Drawing.Point(200, 25);
+            this.labelAttendees.Location = new System.Drawing.Point(68, 25);
             this.labelAttendees.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAttendees.Name = "labelAttendees";
             this.labelAttendees.OutlineForeColor = System.Drawing.Color.Black;
@@ -72,9 +73,10 @@
             // 
             // labelPlusAttendee
             // 
+            this.labelPlusAttendee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPlusAttendee.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelPlusAttendee.ForeColor = System.Drawing.Color.White;
-            this.labelPlusAttendee.Location = new System.Drawing.Point(265, 25);
+            this.labelPlusAttendee.Location = new System.Drawing.Point(133, 25);
             this.labelPlusAttendee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPlusAttendee.Name = "labelPlusAttendee";
             this.labelPlusAttendee.OutlineForeColor = System.Drawing.Color.Black;
@@ -87,9 +89,10 @@
             // 
             // labelMinusAttendee
             // 
+            this.labelMinusAttendee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMinusAttendee.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelMinusAttendee.ForeColor = System.Drawing.Color.White;
-            this.labelMinusAttendee.Location = new System.Drawing.Point(186, 25);
+            this.labelMinusAttendee.Location = new System.Drawing.Point(54, 25);
             this.labelMinusAttendee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMinusAttendee.Name = "labelMinusAttendee";
             this.labelMinusAttendee.OutlineForeColor = System.Drawing.Color.Black;
@@ -104,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 140);
+            this.ClientSize = new System.Drawing.Size(250, 140);
             this.Controls.Add(this.labelMinusAttendee);
             this.Controls.Add(this.labelPlusAttendee);
             this.Controls.Add(this.labelAttendees);

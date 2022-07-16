@@ -9,6 +9,7 @@ namespace WinMeetCost
         private int avgCostPerHour;
         private int numAttendees;
         private string currencySymbol;
+        private string screenLocation;
 
         private int currentCost;
 
@@ -20,11 +21,12 @@ namespace WinMeetCost
             avgCostPerHour = int.Parse(appSettings["AvgCostPerHour"] ?? "500");
             numAttendees = int.Parse(appSettings["NumAttendees"] ?? "5");
             currencySymbol = appSettings["CurrencySymbol"] ?? "kr";
+            screenLocation = appSettings["ScreenLocation"] ?? "Left";
         }
 
         private void FormCountdown_Load(object sender, EventArgs e)
         {
-            SetInBottomRightCorner();
+            SetLocation();
             InitCostLabel();
             UpdateAttendeesLabel();
 
@@ -37,11 +39,18 @@ namespace WinMeetCost
             UpdateCostLabel();
         }
 
-        private void SetInBottomRightCorner()
+        private void SetLocation()
         {
             Rectangle workingArea = Screen.GetWorkingArea(this);
-            Location = new Point(workingArea.Right - Size.Width,
-                                 workingArea.Bottom - Size.Height);
+
+            Location = screenLocation switch
+            {
+                "Right" => new Point(workingArea.Right - Size.Width,
+                                     workingArea.Bottom - Size.Height),
+                "Center" => new Point(workingArea.Right / 2 - Size.Width / 2,
+                                      workingArea.Bottom - Size.Height),
+                _ => new Point(0, workingArea.Bottom - Size.Height),
+            };
         }
 
         private void InitCostLabel()
