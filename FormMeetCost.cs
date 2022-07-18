@@ -10,6 +10,7 @@ namespace WinMeetCost
         private int numAttendees;
         private string currencySymbol;
         private string screenLocation;
+        private string fontColor;
 
         private int currentCost;
 
@@ -22,11 +23,13 @@ namespace WinMeetCost
             numAttendees = int.Parse(appSettings["NumAttendees"] ?? "5");
             currencySymbol = appSettings["CurrencySymbol"] ?? "kr";
             screenLocation = appSettings["ScreenLocation"] ?? "Left";
+            fontColor = appSettings["FontColor"] ?? "GoldenRod";
         }
 
         private void FormCountdown_Load(object sender, EventArgs e)
         {
             SetLocation();
+            SetLabelsColor();
             InitCostLabel();
             UpdateAttendeesLabel();
 
@@ -37,6 +40,14 @@ namespace WinMeetCost
         private void timer_Tick(object sender, EventArgs e)
         {
             UpdateCostLabel();
+        }
+
+        private void SetLabelsColor()
+        {
+            labelCost.ForeColor = Color.FromName(fontColor);
+            labelMinusAttendee.ForeColor = Color.FromName(fontColor);
+            labelAttendees.ForeColor = Color.FromName(fontColor);
+            labelPlusAttendee.ForeColor = Color.FromName(fontColor);
         }
 
         private void SetLocation()
